@@ -32,12 +32,7 @@ project "GLFW"
 	
 	filter "system:windows"
 		systemversion "latest"
-		staticruntime "On"
-
-		buildoptions
-		{
-			"/MT"
-		}
+		staticruntime "on"
 
 		files
 		{
@@ -63,10 +58,8 @@ project "GLFW"
 
 	filter "configurations:Debug"
 		runtime "Debug"
-		buildoptions "/MDd"
 		symbols "on"
 
 	filter "configurations:Release"
 		runtime "Release"
-		buildoptions "/MD"
 		optimize "on"
